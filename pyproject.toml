@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "browser-use-flight-search"
+version = "0.1.0"
+description = "Flight search agent using Kayak and Goggle with browser-use"
+authors = ["Josoroma <pablo@josoroma.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain-openai = "0.3.1"
+python-dotenv = "^1.0.1"
+pydantic = "^2.10.6"
+logging = "^0.4.9.6"
+black = "^25.1.0"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+playwright = "^1.50.0"
+browser-use = "^0.1.35"
+asyncio = "^3.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
