@@ -1,5 +1,7 @@
 # Kayak and Google Flights Search Agent
 
+- [browser-use GitHub repository](https://github.com/browser-use/browser-use)
+
 This project provides asynchronous agents to search for flights on Kayak and Google Flights. The agents use the `browser-use` library to interact with the websites and extract flight details.
 
 ![Google Flights Agent History](google_agent_history.gif)
