@@ -2,12 +2,16 @@
 
 This project provides asynchronous agents to search for flights on Kayak and Google Flights. The agents use the `browser-use` library to interact with the websites and extract flight details.
 
+![Google Flights Agent History](google_agent_history.gif)
+
 ## Features
 
 - Search for flights on Kayak and Google Flights.
 - Extract flight details such as departure, arrival, duration, route, price, and more.
 - Group flight results by airline.
 - Output results in a structured JSON format.
+
+![Kayak Flights Agent History](kayak_agent_history.gif)
 
 ## Setup
 
