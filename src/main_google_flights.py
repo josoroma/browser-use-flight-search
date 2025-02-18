@@ -5,9 +5,9 @@ This module performs a Google Flights search using an asynchronous agent.
 """
 
 import asyncio
-from dotenv import load_dotenv
 
 from browser_use import Agent, Controller
+from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 
 from src.constants import OPENAPI_MODEL_NAME
@@ -17,6 +17,7 @@ from src.typings import GoogleControllerOutput
 
 # Load environment variables from .env
 load_dotenv(override=True)
+
 
 async def google_flights_search_agent(
     departure: str, destination: str, date: str, return_date: str = None
@@ -33,8 +34,13 @@ async def google_flights_search_agent(
     Returns:
     Agent | None: The Google Flights search agent or None if an error occurs.
     """
-    google_flights_url = google_flights_build_url(departure, destination, date, return_date)
-    google_flights_task_description = get_google_flights_task(google_flights_url, departure, destination)
+
+    google_flights_url = google_flights_build_url(
+        departure, destination, date, return_date
+    )
+    google_flights_task_description = get_google_flights_task(
+        google_flights_url, departure, destination
+    )
 
     controller = Controller(output_model=GoogleControllerOutput)
 

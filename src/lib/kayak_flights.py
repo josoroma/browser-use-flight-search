@@ -6,7 +6,10 @@ This module provides functionality to build a Kayak Flights URL for searching fl
 
 from urllib.parse import urlencode
 
-def kayak_flights_build_url(departure: str, destination: str, date: str, return_date: str = None) -> str:
+
+def kayak_flights_build_url(
+    departure: str, destination: str, date: str, return_date: str = None
+) -> str:
     """
     Build a URL for searching flights on Kayak.
 
@@ -19,10 +22,9 @@ def kayak_flights_build_url(departure: str, destination: str, date: str, return_
     Returns:
         str: The constructed URL for the flight search.
     """
+
     base_url = "https://www.kayak.com/flights"
-    query_params = {
-        "sort": "bestflight_a"
-    }
+    query_params = {"sort": "bestflight_a"}
 
     if return_date:
         url = f"{base_url}/{departure}-{destination}/{date}/{return_date}"

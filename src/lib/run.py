@@ -7,6 +7,7 @@ and save the agent's history to a file.
 
 from src.lib.utils import print_agent_brain, print_extracted_content
 
+
 async def run_agent(agent):
     """
     Asynchronously runs the agent, prints debug information, and saves the agent's history.
@@ -23,6 +24,7 @@ async def run_agent(agent):
     3. Prints the action results from the agent's history.
     4. Prints the model thoughts from the agent's history.
     """
+
     result = await agent.run(max_steps=50)
 
     print("-" * 80)

@@ -4,7 +4,10 @@ google_flights.py
 This module provides functionality to build a Google Flights URL for searching flights.
 """
 
-def google_flights_build_url(departure: str, destination: str, date: str, return_date: str = None) -> str:
+
+def google_flights_build_url(
+    departure: str, destination: str, date: str, return_date: str = None
+) -> str:
     """
     Build a Google Flights URL for searching flights on Google.
 
@@ -17,6 +20,7 @@ def google_flights_build_url(departure: str, destination: str, date: str, return
     Returns:
         str: The constructed Google Flights URL.
     """
+
     base_url = "https://www.google.com/travel/flights"
     query = f"?q=flights from {departure} to {destination} on {date}"
     if return_date:

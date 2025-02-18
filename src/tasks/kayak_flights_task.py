@@ -6,9 +6,13 @@ It uses a predefined JSON schema for the output format.
 """
 
 import json
+
 from src.constants import KAYAK_FLIGHT_SEARCH_JSON_SCHEMA
 
-def get_kayak_flights_task(kayak_flights_url: str, departure: str, destination: str) -> str:
+
+def get_kayak_flights_task(
+    kayak_flights_url: str, departure: str, destination: str
+) -> str:
     """
     Generate the task description for Kayak flights search.
 
@@ -20,6 +24,7 @@ def get_kayak_flights_task(kayak_flights_url: str, departure: str, destination: 
     Returns:
         str: Formatted task description.
     """
+
     task_description = (
         f"- Visit Kayak Flights at {kayak_flights_url} and wait for the flight search results to fully load.\n"
         "- Extract all the flights scrollable on the page.\n"
@@ -27,5 +32,5 @@ def get_kayak_flights_task(kayak_flights_url: str, departure: str, destination: 
         f"(extend JSON output with `route` attribute and value `{departure}-{destination}`):\n\n"
         f"{json.dumps(KAYAK_FLIGHT_SEARCH_JSON_SCHEMA, indent=4)}\n"
     )
-    
+
     return task_description

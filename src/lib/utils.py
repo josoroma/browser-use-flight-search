@@ -18,6 +18,7 @@ def print_agent_brain(model_thoughts):
     Returns:
         None
     """
+
     if not model_thoughts:
         print("No model thoughts available.")
         return
@@ -41,6 +42,7 @@ def print_extracted_content(action_results):
     Returns:
         None
     """
+
     if not action_results:
         print("No action results available.")
         return
@@ -61,6 +63,7 @@ def print_structured_result(result):
     Returns:
         None
     """
+
     print("\n=== Structured Result ===\n")
 
     try:
